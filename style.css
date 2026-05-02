@@ -172,3 +172,33 @@ body {
 .goog-te-gadget {
     color: transparent !important;
 }
+/* Hero Section */
+.hero-section {
+    min-height: 80vh; /* Occupa l'80% dell'altezza dello schermo */
+    padding-top: 120px; /* Spazio extra per la navbar tonda fixed */
+    background-color: #fcfaf2; /* Il tuo bianco crema */
+}
+
+/* Stile per il titolo principale */
+.hero-section h1 {
+    color: #1a1a1a;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+/* Animazione fluida all'ingresso (opzionale) */
+.hero-section {
+    animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Spaziatura tra le lettere per il sottotitolo */
+.tracking-widest {
+    letter-spacing: 0.2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
