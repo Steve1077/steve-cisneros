@@ -63,30 +63,62 @@
     </div>
 </header>
   
-  <div class="container my-5">
-    <div class="row">
-        <!-- Card Progetto Video -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card h-100 shadow-sm video-card">
-                <!-- Immagine di anteprima (Thumbnail) -->
-                <div class="ratio ratio-16x9">
-                    <img src="https://via.placeholder.com/600x338" class="card-img-top" alt="Anteprima Video" style="object-fit: cover;">
-                </div>
-                
-                <div class="card-body">
-                    <h5 class="card-title">Titolo Progetto Video</h5>
-                    <p class="card-text text-muted">Montaggio realizzato con <strong>Premiere Pro</strong>. Focus su color correction e tagli ritmici.</p>
-                    <div class="mb-3">
-                        <span class="badge rounded-pill bg-dark">Editing</span>
-                        <span class="badge rounded-pill bg-primary">Adobe</span>
+  <section id="works" class="py-5">
+    <div class="container">
+        <!-- Titolo della sezione (opzionale) -->
+        <h2 class="text-center fw-bold mb-5">Featured Works</h2>
+        
+        <div class="row g-4"> <!-- g-4 gestisce lo spazio tra le card -->
+            
+            <!-- Video 1 -->
+            <div class="col-md-4">
+                <div class="card h-100 custom-card shadow-sm">
+                    <div class="ratio ratio-16x9">
+                        <!-- Se hai il file nel PC -->
+                        <video controls>
+                            <source src="video1.mp4" type="video/mp4">
+                        </video>
                     </div>
-                    <a href="#" class="btn btn-outline-primary btn-sm w-100">Guarda il Video</a>
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Dynamic Edit</h5>
+                        <p class="card-text text-muted">Focus on fast transitions and rhythmic flow.</p>
+                    </div>
                 </div>
             </div>
+
+            <!-- Video 2 -->
+            <div class="col-md-4">
+                <div class="card h-100 custom-card shadow-sm">
+                    <div class="ratio ratio-16x9">
+                        <video controls>
+                            <source src="video2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Storytelling</h5>
+                        <p class="card-text text-muted">Using subtitles and pacing to tell a story.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video 3 -->
+            <div class="col-md-4">
+                <div class="card h-100 custom-card shadow-sm">
+                    <div class="ratio ratio-16x9">
+                        <video controls>
+                            <source src="video3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Creative Content</h5>
+                        <p class="card-text text-muted">Experiments with visual effects and colors.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <!-- Puoi copiare questo blocco col-md-6 per altri video -->
     </div>
-</div>
+</section>
   <script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'it'}, 'google_translate_element');
