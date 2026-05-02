@@ -66,3 +66,50 @@ a:hover {
     font-weight: 500;
     letter-spacing: 0.5px;
 }
+/* Stile personalizzato per la Navbar */
+.custom-navbar {
+    background-color: #ffffff; /* Bianco puro per staccare dal fondo crema */
+    padding: 15px 0;
+}
+
+/* Colore del Brand/Logo */
+.navbar-brand {
+    color: #1a1a1a !important;
+    letter-spacing: 1px;
+}
+
+/* Stile dei link */
+.nav-link {
+    color: #4a4a4a !important;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff !important; /* Un tocco di blu al passaggio del mouse */
+}
+
+/* Bottone "Contattami" speciale nella navbar */
+.btn-contatto {
+    border: 1px solid #1a1a1a;
+    border-radius: 20px;
+    padding: 5px 20px !important;
+    margin-left: 15px;
+}
+
+.btn-contatto:hover {
+    background-color: #1a1a1a;
+    color: #ffffff !important;
+}
+
+/* Rendi la navbar fissa in alto (opzionale) */
+body {
+    padding-top: 70px; /* Spazio per non far finire il contenuto sotto la navbar fissa */
+}
+.custom-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
