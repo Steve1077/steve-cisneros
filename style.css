@@ -1,1 +1,19 @@
+/* Sfondo scuro e font moderno */
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
 
+/* Colore per i titoli */
+h1 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+}
+
+/* Stile per la lista delle competenze */
+ul {
+    list-style-type: square;
+}
