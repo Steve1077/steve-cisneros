@@ -113,3 +113,20 @@ body {
     width: 100%;
     z-index: 1000;
 }
+/* Nasconde il banner fastidioso di Google in alto (opzionale) */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+body {
+    top: 0px !important;
+}
+
+/* Stilizza il selettore */
+#google_translate_element select {
+    background-color: #ffffff;
+    color: #4a4a4a;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: inherit;
+}
