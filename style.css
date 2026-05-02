@@ -174,31 +174,46 @@ body {
 }
 /* Hero Section */
 .hero-section {
-    min-height: 80vh; /* Occupa l'80% dell'altezza dello schermo */
-    padding-top: 120px; /* Spazio extra per la navbar tonda fixed */
-    background-color: #fcfaf2; /* Il tuo bianco crema */
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Assicura che ci sia respiro tra navbar e titolo */
+    padding-top: 50px; 
+    padding-bottom: 50px;
 }
-
-/* Stile per il titolo principale */
-.hero-section h1 {
-    color: #1a1a1a;
-    letter-spacing: -1px;
-    line-height: 1.1;
-}
-
-/* Animazione fluida all'ingresso (opzionale) */
 .hero-section {
-    animation: fadeIn 1.5s ease-out;
+    position: relative;
+    z-index: 1; /* Sta sotto la navbar */
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Opzionale: un leggero margine superiore al titolo per sicurezza */
+.hero-section h1 {
+    margin-top: 20px;
+}
+.navbar-custom {
+    z-index: 9999; /* La tiene sempre in primo piano */
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centra la navbar tonda */
+}
+/* Stile per il blocco bio */
+.bio-text p {
+    line-height: 1.8; /* Aumenta lo spazio tra le righe per stancare meno la vista */
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Spaziatura tra le lettere per il sottotitolo */
-.tracking-widest {
-    letter-spacing: 0.2rem;
-    font-size: 0.9rem;
-    font-weight: 600;
+/* Un tocco di eleganza: rendiamo la prima frase leggermente più evidente */
+.bio-text .lead {
+    font-weight: 500;
+    color: #1a1a1a !important;
+}
+
+/* Per il testo secondario usiamo un grigio che stia bene sul crema */
+.text-secondary {
+    color: #555555 !important;
+    font-style: italic; /* Opzionale: dà un tono più personale alla seconda parte */
 }
