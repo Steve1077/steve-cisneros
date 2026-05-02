@@ -17,3 +17,20 @@ h1 {
 ul {
     list-style-type: square;
 }
+/* Effetto Hover sulla Card */
+.video-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none; /* Rimuove il bordo standard di Bootstrap */
+    overflow: hidden;
+}
+
+.video-card:hover {
+    transform: translateY(-10px); /* Alza la card */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2) !important; /* Ombra più profonda */
+}
+
+/* Stile per i badge */
+.badge {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
