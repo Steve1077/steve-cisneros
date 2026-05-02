@@ -122,7 +122,7 @@ body {
 }
 /* Navbar stile pillola/tonda */
 .navbar-custom {
-    background-color: rgba(255, 255, 255, 0.95); /* Bianco leggermente trasparente */
+    background-color: rgba(252, 250, 242, 0.9); /* Bianco leggermente trasparente */
     border-radius: 50px;       /* Angoli molto arrotondati */
     margin: 20px auto;         /* Stacca la navbar dai bordi */
     width: 90%;                /* Non tocca i bordi laterali */
