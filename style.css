@@ -217,3 +217,26 @@ body {
     color: #555555 !important;
     font-style: italic; /* Opzionale: dà un tono più personale alla seconda parte */
 }
+/* Stile delle card video */
+.custom-card {
+    border: none;
+    border-radius: 25px; /* Angoli tondi come la navbar */
+    overflow: hidden;    /* Necessario per non far uscire il video dai bordi tondi */
+    background-color: #ffffff; /* Bianco puro per risaltare sul crema */
+    transition: transform 0.3s ease;
+}
+
+/* Effetto al passaggio del mouse */
+.custom-card:hover {
+    transform: translateY(-10px); /* La card si alza leggermente */
+}
+
+/* Stile per i video all'interno delle card */
+.custom-card video {
+    background-color: #000;
+}
+
+.card-title {
+    color: #1a1a1a;
+    margin-top: 10px;
+}
