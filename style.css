@@ -1,237 +1,141 @@
-/* Stile Generale del Corpo */
+/* =========================================
+   1. STILE GENERALE E CORPO
+   ========================================= */
 body {
-    /* Colore Bianco Crema Leggero */
-    background-color: #fcfaf2; 
-    
-    /* Testo grigio molto scuro (meglio del nero puro per la leggibilità) */
-    color: #2c2c2c; 
-    
+    background-color: #fcfaf2; /* Sfondo Crema */
+    color: #2c2c2c;
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    padding-top: 120px; /* Spazio per la navbar tonda */
 }
 
 /* Titoli */
 h1, h2, h3 {
-    /* Un blu scuro o un antracite per far risaltare i titoli */
     color: #1a1a1a;
     font-weight: 700;
 }
 
-/* Link */
+/* Link Standard */
 a {
-    color: #0056b3; /* Un blu classico che sta bene sul crema */
+    color: #0056b3;
     text-decoration: none;
     transition: 0.3s;
 }
 
 a:hover {
     color: #003d80;
-    text-decoration: underline;
 }
 
-/* Se usi le Card di Bootstrap, rendiamole bianche per staccare dallo sfondo crema */
-.card {
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+/* =========================================
+   2. NAVBAR TONDA (OPZIONE NERO ANTRACITE)
+   ========================================= */
+.navbar-custom {
+    background-color: #1a1a1a !important; /* Nero Antracite */
+    border-radius: 50px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1100px;
+    padding: 10px 25px;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Testo secondario o descrizioni brevi */
-.text-muted {
-    color: #6c757d !important;
-}
-
-/* Stile per i badge delle competenze (es. Python, Premiere) */
-.badge {
-    padding: 8px 12px;
-    font-size: 0.85rem;
-}
-/* Effetto Hover sulla Card */
-.video-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: none; /* Rimuove il bordo standard di Bootstrap */
-    overflow: hidden;
-}
-
-.video-card:hover {
-    transform: translateY(-10px); /* Alza la card */
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2) !important; /* Ombra più profonda */
-}
-
-/* Stile per i badge */
-.badge {
-    font-weight: 500;
-    letter-spacing: 0.5px;
-}
-/* Stile personalizzato per la Navbar */
-.custom-navbar {
-    background-color: #ffffff; /* Bianco puro per staccare dal fondo crema */
-    padding: 15px 0;
-}
-
-/* Colore del Brand/Logo */
-.navbar-brand {
-    color: #1a1a1a !important;
+/* Logo e Link della Navbar (Chiari su scuro) */
+.navbar-custom .navbar-brand {
+    color: #fcfaf2 !important; /* Colore crema per richiamare lo sfondo */
+    font-weight: 700;
     letter-spacing: 1px;
 }
 
-/* Stile dei link */
-.nav-link {
-    color: #4a4a4a !important;
+.navbar-custom .nav-link {
+    color: #fcfaf2 !important;
     font-weight: 500;
     margin: 0 10px;
-    transition: color 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 
-.nav-link:hover {
-    color: #007bff !important; /* Un tocco di blu al passaggio del mouse */
+.navbar-custom .nav-link:hover {
+    opacity: 0.7;
+    color: #ffffff !important;
 }
 
-/* Bottone "Contattami" speciale nella navbar */
+/* Bottone Contatto nella Navbar */
 .btn-contatto {
-    border: 1px solid #1a1a1a;
+    border: 1px solid #fcfaf2 !important;
+    color: #fcfaf2 !important;
     border-radius: 20px;
     padding: 5px 20px !important;
     margin-left: 15px;
 }
 
 .btn-contatto:hover {
-    background-color: #1a1a1a;
-    color: #ffffff !important;
+    background-color: #fcfaf2 !important;
+    color: #1a1a1a !important;
 }
 
-/* Rendi la navbar fissa in alto (opzionale) */
-body {
-    padding-top: 70px; /* Spazio per non far finire il contenuto sotto la navbar fissa */
-}
-.custom-navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-/* Nasconde il banner fastidioso di Google in alto (opzionale) */
-.goog-te-banner-frame.skiptranslate {
-    display: none !important;
-}
-body {
-    top: 0px !important;
-}
-/* Navbar stile pillola/tonda */
-.navbar-custom {
-    background-color: rgba(252, 250, 242, 0.9); /* Bianco leggermente trasparente */
-    border-radius: 50px;       /* Angoli molto arrotondati */
-    margin: 20px auto;         /* Stacca la navbar dai bordi */
-    width: 90%;                /* Non tocca i bordi laterali */
-    max-width: 1100px;
-    transition: opacity 0.4s ease, transform 0.4s ease; /* Transizione fluida */
-    padding: 10px 25px;
-}
-
-/* Quando la navbar deve sparire */
+/* Navbar a comparsa/scomparsa */
 .navbar-hidden {
     opacity: 0;
-    transform: translateY(-20px); /* Si sposta leggermente in alto mentre sparisce */
-    pointer-events: none;         /* Impedisce di cliccare i link quando è invisibile */
+    transform: translate(-50%, -20px);
+    pointer-events: none;
 }
 
-/* Assicurati che il contenuto del sito non finisca sotto la navbar all'inizio */
-body {
-    padding-top: 100px;
-    background-color: #fcfaf2; /* Il tuo bianco crema */
-}
-/* Posizionamento del traduttore */
-#google_translate_element {
-    display: inline-block;
-    padding: 10px;
-    /* Sposta il widget dal bordo destro */
-    margin-right: 20px; 
-    /* Se vuoi che sia allineato a destra ma distanziato, usa questo: */
-    float: right; 
-}
-
-/* Stilizzazione del selettore per farlo sembrare parte del design */
-.goog-te-combo {
-    background-color: #ffffff; /* Bianco per staccare dal crema */
-    color: #2c2c2c;
-    border: 1px solid #d1d1d1;
-    border-radius: 4px;
-    padding: 4px 8px;
-    outline: none;
-    font-family: inherit;
-    cursor: pointer;
-}
-
-/* Rimuove il testo "Powered by Google" (opzionale, per pulizia) */
-.goog-logo-link {
-    display: none !important;
-}
-.goog-te-gadget {
-    color: transparent !important;
-}
-/* Hero Section */
+/* =========================================
+   3. HERO SECTION & TESTO BIO
+   ========================================= */
 .hero-section {
     min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Assicura che ci sia respiro tra navbar e titolo */
-    padding-top: 50px; 
-    padding-bottom: 50px;
-}
-.hero-section {
     position: relative;
-    z-index: 1; /* Sta sotto la navbar */
+    z-index: 1;
 }
 
-/* Opzionale: un leggero margine superiore al titolo per sicurezza */
 .hero-section h1 {
     margin-top: 20px;
 }
-.navbar-custom {
-    z-index: 9999; /* La tiene sempre in primo piano */
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%); /* Centra la navbar tonda */
-}
-/* Stile per il blocco bio */
+
 .bio-text p {
-    line-height: 1.8; /* Aumenta lo spazio tra le righe per stancare meno la vista */
+    line-height: 1.8;
     max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 1.5rem auto;
 }
 
-/* Un tocco di eleganza: rendiamo la prima frase leggermente più evidente */
 .bio-text .lead {
     font-weight: 500;
     color: #1a1a1a !important;
 }
 
-/* Per il testo secondario usiamo un grigio che stia bene sul crema */
 .text-secondary {
     color: #555555 !important;
-    font-style: italic; /* Opzionale: dà un tono più personale alla seconda parte */
+    font-style: italic;
 }
-/* Stile delle card video */
+
+/* =========================================
+   4. CARD VIDEO
+   ========================================= */
 .custom-card {
     border: none;
-    border-radius: 25px; /* Angoli tondi come la navbar */
-    overflow: hidden;    /* Necessario per non far uscire il video dai bordi tondi */
-    background-color: #ffffff; /* Bianco puro per risaltare sul crema */
-    transition: transform 0.3s ease;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: #ffffff; /* Bianco per staccare dal crema */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* Effetto al passaggio del mouse */
 .custom-card:hover {
-    transform: translateY(-10px); /* La card si alza leggermente */
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
 }
 
-/* Stile per i video all'interno delle card */
 .custom-card video {
     background-color: #000;
 }
@@ -239,4 +143,46 @@ body {
 .card-title {
     color: #1a1a1a;
     margin-top: 10px;
+}
+
+/* Badge Competenze */
+.badge {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    background-color: #1a1a1a !important; /* Badge scuri come la navbar */
+}
+
+/* =========================================
+   5. TRADUTTORE GOOGLE
+   ========================================= */
+#google_translate_element {
+    display: inline-block;
+    padding: 5px;
+    margin-right: 15px;
+}
+
+.goog-te-combo {
+    background-color: transparent;
+    color: #fcfaf2; /* Testo chiaro nella navbar scura */
+    border: 1px solid rgba(252, 250, 242, 0.3);
+    border-radius: 4px;
+    padding: 2px 5px;
+    font-size: 0.8rem;
+}
+
+.goog-logo-link, .goog-te-gadget span {
+    display: none !important;
+}
+
+.goog-te-gadget {
+    color: transparent !important;
+}
+
+/* Rimuove barra superiore Google */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+body {
+    top: 0px !important;
 }
