@@ -1,7 +1,7 @@
 /* Sfondo scuro e font moderno */
 body {
     background-color: #1a1a1a;
-    color: #ffffff;
+    color: #faf0e6;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     padding: 20px;
@@ -33,23 +33,4 @@ ul {
 .badge {
     font-weight: 500;
     letter-spacing: 0.5px;
-}
-body {
-    /* Percorso della tua foto */
-    background-image: url('background.jpg');
-
-    /* Fissa lo sfondo così non si muove quando scrolli */
-    background-attachment: fixed;
-
-    /* Centra l'immagine */
-    background-position: center;
-
-    /* Impedisce all'immagine di ripetersi (niente effetto piastrella) */
-    background-repeat: no-repeat;
-
-    /* Forza l'immagine a coprire tutto lo schermo */
-    background-size: cover;
-
-    /* Opzionale: aggiungi un colore di riserva se l'immagine non carica */
-    background-color: #1a1a1a;
 }
