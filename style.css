@@ -1,21 +1,53 @@
-/* Sfondo scuro e font moderno */
+/* Stile Generale del Corpo */
 body {
-    background-color: #1a1a1a;
-    color: #faf0e6;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Colore Bianco Crema Leggero */
+    background-color: #fcfaf2; 
+    
+    /* Testo grigio molto scuro (meglio del nero puro per la leggibilità) */
+    color: #2c2c2c; 
+    
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
 }
 
-/* Colore per i titoli */
-h1 {
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
+/* Titoli */
+h1, h2, h3 {
+    /* Un blu scuro o un antracite per far risaltare i titoli */
+    color: #1a1a1a;
+    font-weight: 700;
 }
 
-/* Stile per la lista delle competenze */
-ul {
-    list-style-type: square;
+/* Link */
+a {
+    color: #0056b3; /* Un blu classico che sta bene sul crema */
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #003d80;
+    text-decoration: underline;
+}
+
+/* Se usi le Card di Bootstrap, rendiamole bianche per staccare dallo sfondo crema */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Testo secondario o descrizioni brevi */
+.text-muted {
+    color: #6c757d !important;
+}
+
+/* Stile per i badge delle competenze (es. Python, Premiere) */
+.badge {
+    padding: 8px 12px;
+    font-size: 0.85rem;
 }
 /* Effetto Hover sulla Card */
 .video-card {
