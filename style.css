@@ -120,7 +120,29 @@ body {
 body {
     top: 0px !important;
 }
+/* Navbar stile pillola/tonda */
+.navbar-custom {
+    background-color: rgba(255, 255, 255, 0.95); /* Bianco leggermente trasparente */
+    border-radius: 50px;       /* Angoli molto arrotondati */
+    margin: 20px auto;         /* Stacca la navbar dai bordi */
+    width: 90%;                /* Non tocca i bordi laterali */
+    max-width: 1100px;
+    transition: opacity 0.4s ease, transform 0.4s ease; /* Transizione fluida */
+    padding: 10px 25px;
+}
 
+/* Quando la navbar deve sparire */
+.navbar-hidden {
+    opacity: 0;
+    transform: translateY(-20px); /* Si sposta leggermente in alto mentre sparisce */
+    pointer-events: none;         /* Impedisce di cliccare i link quando è invisibile */
+}
+
+/* Assicurati che il contenuto del sito non finisca sotto la navbar all'inizio */
+body {
+    padding-top: 100px;
+    background-color: #fcfaf2; /* Il tuo bianco crema */
+}
 /* Posizionamento del traduttore */
 #google_translate_element {
     display: inline-block;
